@@ -4,9 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <h1>Первый</h1>
-    <script src="./js/1.js" type="module"></script>
+    <!-- <h1>Первый</h1> -->
+
+    <div class="container">
+      <div class="div-top">
+        <div class="div-top2">
+          <img
+            class="div-img"
+            width="200"
+            src="./images/ПриватБанк.png"
+            alt="logo"
+          />
+        </div>
+        <div class="div-top-button">
+          <h1 class="h1" style="margin-top: 0; margin-bottom: 20px">
+            Будь-ласка, вставте вашу картку.
+          </h1>
+          <!-- <img
+          style="display: block; margin-left: auto; margin-right: auto"
+          width="110"
+          src="./images/logo.png"
+          alt="big-logo"
+        /> -->
+          <button class="btn0" type="button">Прововжити</button>
+          <label class="label-input">
+            Введіть суму:
+            <input
+              class="input"
+              type="text"
+              onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+              data-value
+            />
+          </label>
+          <button class="btn2">Підтвердити</button>
+        </div>
+        <div class="container flex">
+          <button class="btn-end">Вихід</button>
+          <button class="btn" type="button">Вставити картку</button>
+        </div>
+      </div>
+      <div class="div-button">
+        <!-- <img src="./images/logo.png" alt="" /> -->
+      </div>
+      <div class="b"></div>
+    </div>
+
+    <!-- <script src="./js/1.js" type="module"></script> -->
+    <script src="./js/2.js" type="module"></script>
   </body>
 </html>

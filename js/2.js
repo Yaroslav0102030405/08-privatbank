@@ -1,0 +1,113 @@
+const stars = 3;
+let price;
+
+// if (stars === 1) {
+//   price = 20;
+// } else if (stars === 2) {
+//   price = 30;
+// } else {
+//   console.log("Такого количества звед нет");
+// }
+
+// console.log(price);
+
+// switch (stars) {
+//   case 1:
+//     price = 20;
+//     break;
+
+//   case 2:
+//     price = 30;
+//     break;
+
+//   default:
+//     console.log("Такого количества звезд нет");
+// }
+
+// console.log(price);
+
+// switch (stars) {
+//   case 1:
+//     price = 20;
+//     break;
+
+//   case 2:
+//     price = 50;
+//     break;
+
+//   default:
+//     price = "Такого количетсва звед нет";
+// }
+
+// console.log(price);
+
+// for (let i = 0; i <= 5; i += 1) {
+//   console.log(i);
+// }
+
+// for (let i = 100; i >= 0; i -= 10) {
+//   console.log(i);
+// }
+
+// let total = 0;
+
+// for (let i = 0; i < 5; i += 1) {
+//   if (i % 2 !== 0) {
+//     continue;
+//   }
+
+//   total += i;
+// }
+
+// console.log(total);
+
+const h1El = document.querySelector(".h1");
+const inputEl = document.querySelector("input[data-value]");
+const btnEl2 = document.querySelector(".btn2");
+const labelEl = document.querySelector(".label-input");
+const end = document.querySelector(".btn-end");
+
+const btnEl = document.querySelector(".btn");
+btnEl.addEventListener("click", showRandomEmployeeSalary);
+
+btnEl2.addEventListener("click", showBalance);
+end.addEventListener("click", onEnd);
+
+const minSalary = 500;
+const maxSalary = 1000;
+let balance = 0;
+
+function showRandomEmployeeSalary() {
+  balance = Math.round(Math.random() * (maxSalary - minSalary) + maxSalary);
+
+  h1El.textContent = `Залишок на вашому рахунку - ${balance} грн.`;
+  inputEl.classList.add("active");
+  btnEl2.classList.add("active");
+  labelEl.classList.add("active");
+  btnEl.disabled = true;
+}
+
+function showBalance() {
+  const value = Number(inputEl.value);
+  inputEl.value = "";
+  console.log(value);
+
+  const text = document.createElement("p");
+  text.classList.add("text");
+  btnEl2.after(text);
+  //   salary -= value;
+
+  if (value === " " || value === 0) {
+    text.textContent = `Не коректна сума, спробуйте знову.`;
+  } else if (value <= balance) {
+    balance -= value;
+    text.textContent = `Знято з рахунку - ${value} грн.`;
+    h1El.textContent = `Залишок на вашому рахунку - ${balance} грн.`;
+  } else {
+    text.textContent = `Недостатньо грошей для проведення операції`;
+  }
+}
+
+function onEnd() {
+  location.href = location.href;
+}
