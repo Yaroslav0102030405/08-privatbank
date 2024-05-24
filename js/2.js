@@ -74,13 +74,13 @@ btnEl2.addEventListener("click", showBalance);
 end.addEventListener("click", onEnd);
 
 const minSalary = 500;
-const maxSalary = 1000;
+const maxSalary = 1500;
 let balance = 0;
 
 function showRandomEmployeeSalary() {
-  balance = Math.round(Math.random() * (maxSalary - minSalary) + maxSalary);
+  balance = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
 
-  h1El.textContent = `Залишок на вашому рахунку - ${balance} грн.`;
+  h1El.textContent = `Доступні кошти - ${balance} грн.`;
   inputEl.classList.add("active");
   btnEl2.classList.add("active");
   labelEl.classList.add("active");
@@ -99,12 +99,30 @@ function showBalance() {
 
   if (value === " " || value === 0) {
     text.textContent = `Не коректна сума, спробуйте знову.`;
-  } else if (value <= balance) {
+  } else if (value > balance) {
+    text.textContent = `Недостатньо грошей для проведення операції`;
+  } else if (
+    value === 100 ||
+    value === 200 ||
+    value === 300 ||
+    value === 500 ||
+    value === 700 ||
+    value === 900 ||
+    value === 1000 ||
+    value === 200 * 2 ||
+    value === 300 * 2 ||
+    value === 400 * 2 ||
+    value === 1000 + 100 ||
+    value === 600 * 2 ||
+    value === 1300 ||
+    value === 700 * 2 ||
+    value === 1500
+  ) {
     balance -= value;
-    text.textContent = `Знято з рахунку - ${value} грн.`;
+    text.textContent = `Знято з рахунку - ${value} грн. Дякуємо за візит.`;
     h1El.textContent = `Залишок на вашому рахунку - ${balance} грн.`;
   } else {
-    text.textContent = `Недостатньо грошей для проведення операції`;
+    text.textContent = `Введіть суму кратну 100, 200, 500, 1000 `;
   }
 }
 
