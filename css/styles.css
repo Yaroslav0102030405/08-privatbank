@@ -30,7 +30,7 @@ button {
 .div-img {
   /* padding-top: 40px; */
   margin-top: 20px;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .div-top-button {
@@ -44,7 +44,7 @@ button {
 }
 
 .div-top-button h1 {
-  font-size: 20px;
+  font-size: 26px;
 }
 
 .div-button {
@@ -106,14 +106,38 @@ button {
 .btn-end {
   margin-top: 20px;
   margin-left: 28px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.btn-end:focus,
+.btn-end:hover {
+  background-color: orangered;
 }
 
 .btn {
   margin-top: 20px;
   margin-right: 28px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.btn:focus,
+.btn:hover {
+  background-color: yellow;
+}
+
+.xxx {
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 2px solid grey;
+  width: 170px;
 }
 
 .a {
+  /* opacity: 0; */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -121,13 +145,28 @@ button {
 
   background-color: #fff;
   width: 130px;
+  transform: translateY(-94%);
+  transition: all 0.25s linear;
+}
+
+.a.active2 {
+  /* opacity: 1; */
+  transform: translateY(0);
+  transition: all 0.25s linear;
+  border-bottom: dashed green;
+}
+
+.a:hover {
+  transform: translateY(0);
+  transition: all 0.25s linear;
+  border-bottom: dashed green;
 }
 
 .a p {
   text-align: center;
 }
 
-h1 {
+/* h1 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -147,9 +186,9 @@ h1 {
   );
   background-size: 400% 400%;
   animation: move 10s ease infinite;
-}
+} */
 
-@keyframes move {
+/* @keyframes move {
   0% {
     background-position: 0, 0;
   }
@@ -165,4 +204,4 @@ h1 {
   100% {
     background-position: 0, 0;
   }
-}
+} */

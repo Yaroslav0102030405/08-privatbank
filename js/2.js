@@ -67,6 +67,7 @@ const btnEl2 = document.querySelector(".btn2");
 const labelEl = document.querySelector(".label-input");
 const end = document.querySelector(".btn-end");
 const checkEl = document.querySelector(".check");
+const a = document.querySelector(".a");
 
 const btnEl = document.querySelector(".btn");
 btnEl.addEventListener("click", showRandomEmployeeSalary);
@@ -124,6 +125,8 @@ function showBalance() {
     total += value;
     text.textContent = `Знято з рахунку - ${value} грн. Дякуємо за візит.`;
     h1El.textContent = `Залишок на вашому рахунку - ${balance} грн.`;
+
+    a.classList.add("active2");
     checkEl.textContent = `Квитанція про зняття коштів - ${total} грн`;
   } else {
     text.textContent = `Введіть суму кратну 100, 200, 500, 1000 `;
