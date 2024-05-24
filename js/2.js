@@ -66,6 +66,7 @@ const inputEl = document.querySelector("input[data-value]");
 const btnEl2 = document.querySelector(".btn2");
 const labelEl = document.querySelector(".label-input");
 const end = document.querySelector(".btn-end");
+const checkEl = document.querySelector(".check");
 
 const btnEl = document.querySelector(".btn");
 btnEl.addEventListener("click", showRandomEmployeeSalary);
@@ -76,6 +77,7 @@ end.addEventListener("click", onEnd);
 const minSalary = 500;
 const maxSalary = 1500;
 let balance = 0;
+let total = 0;
 
 function showRandomEmployeeSalary() {
   balance = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
@@ -119,8 +121,10 @@ function showBalance() {
     value === 1500
   ) {
     balance -= value;
+    total += value;
     text.textContent = `Знято з рахунку - ${value} грн. Дякуємо за візит.`;
     h1El.textContent = `Залишок на вашому рахунку - ${balance} грн.`;
+    checkEl.textContent = `Квитанція про зняття коштів - ${total} грн`;
   } else {
     text.textContent = `Введіть суму кратну 100, 200, 500, 1000 `;
   }
