@@ -67,9 +67,9 @@ button {
   font-size: 19px;
 }
 
-.btn {
+/* .btn {
   background-color: #fff;
-}
+} */
 
 .btn2 {
   margin-top: 10px;
@@ -104,11 +104,11 @@ button {
 }
 
 .btn-end {
-  /* margin-top: 20px; */
+  margin-top: 20px;
   margin-left: 50px;
 }
 
 .btn {
-  /* margin-top: 20px; */
+  margin-top: 20px;
   margin-right: 50px;
 }
