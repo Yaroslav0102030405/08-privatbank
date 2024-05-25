@@ -113,7 +113,8 @@ button {
 
 .btn-end:focus,
 .btn-end:hover {
-  background-color: orangered;
+  /* background-color: orangered; */
+  background-color: #00b300;
 }
 
 .btn {
@@ -127,7 +128,8 @@ button {
 
 .btn:focus,
 .btn:hover {
-  background-color: yellow;
+  /* background-color: yellow; */
+  background-color: #00b300;
 }
 
 .xxx {
