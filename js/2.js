@@ -134,5 +134,6 @@ function showBalance() {
 }
 
 function onEnd() {
+  a.classList.remove("active2");
   location.href = location.href;
 }
