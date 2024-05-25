@@ -108,6 +108,7 @@ button {
   margin-left: 28px;
   padding: 5px;
   border-radius: 4px;
+  background-color: #228b22;
 }
 
 .btn-end:focus,
@@ -120,6 +121,8 @@ button {
   margin-right: 28px;
   padding: 5px;
   border-radius: 4px;
+  background-color: #228b22;
+  /* background-color: #4cbb17; */
 }
 
 .btn:focus,
