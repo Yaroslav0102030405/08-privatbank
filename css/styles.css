@@ -1,5 +1,14 @@
+:root {
+  --basic-system-font: "Montserrat", -apple-system, BlinkMacSystemFont;
+}
+
 body {
+  font-family: var(--basic-system-font);
   cursor: url("../images/1.png"), auto;
+
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 button {
@@ -13,7 +22,7 @@ button {
 .div-top {
   margin-right: auto;
   margin-left: auto;
-  width: 340px;
+  max-width: 370px;
   height: 400px;
   background-color: green;
 }
@@ -50,7 +59,7 @@ button {
 .div-button {
   margin-right: auto;
   margin-left: auto;
-  width: 340px;
+  max-width: 370px;
   height: 50px;
   background-color: green;
 }
@@ -87,7 +96,7 @@ button {
 .b {
   margin-right: auto;
   margin-left: auto;
-  width: 340px;
+  max-width: 370px;
   height: 200px;
   background-color: green;
 }
@@ -101,6 +110,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /* margin: 0 auto; */
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .btn-end {
