@@ -147,8 +147,8 @@ button {
   padding: 5px;
 
   background-color: #fff;
-  width: 130px;
-  transform: translateY(-94%);
+  /* width: 130px; */
+  transform: translateY(-96%);
   transition: all 0.25s linear;
 }
 
@@ -208,3 +208,7 @@ button {
     background-position: 0, 0;
   }
 } */
+
+.check {
+  font-size: 24px;
+}

@@ -127,7 +127,7 @@ function showBalance() {
     h1El.textContent = `Залишок на вашому рахунку - ${balance} грн.`;
 
     a.classList.add("active2");
-    checkEl.textContent = `Квитанція про зняття коштів - ${total} грн`;
+    checkEl.textContent = `Квитанція про зняття коштів ${total} грн`;
   } else {
     text.textContent = `Введіть суму кратну 100, 200, 500, 1000 `;
   }
