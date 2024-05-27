@@ -20,15 +20,11 @@
       <!-- IOS Safari -->
       <meta name="apple-mobile-web-app-status-bar-style" content="green" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <script>
-      window.onload = function () {
-        var context = new AudioContext();
-      };
-   </script>
+ 
   </head>
   <body>
     <!-- <h1>Первый</h1> -->
-    <!-- <audio src="./music/Добрий день Будь лас.mp3" autoplay="autoplay" preload="none"></audio> -->
+    <audio src="./music/Добрий день Будь лас.mp3" autoplay preload="auto"></audio>
 
     <div class="container">
       <div class="div-top">
@@ -98,12 +94,6 @@
     <script src="./js/2.js" type="module"></script>
     <!-- <script src="./js/3.js" type="module"></script> -->
    
-    <audio id="audio" autoplay>
-      <source src="./music/Добрий день Будь лас.mp3" 
-      type="audio/mp3" />
-   </audio>
-   <script>
-      let audio = (document.getElementById('audio').autoplay = true);
-   </script>
+    
   </body>
 </html>
