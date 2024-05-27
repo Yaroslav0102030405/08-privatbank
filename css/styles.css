@@ -78,10 +78,6 @@ button {
   font-size: 19px;
 }
 
-/* .btn {
-  background-color: #fff;
-} */
-
 .btn2 {
   margin-top: 10px;
   display: none;
@@ -120,7 +116,7 @@ button {
   font-family: inherit;
   margin-top: 20px;
   /* margin-left: 28px; */
-  padding: 5px;
+  padding: 8px 15px;
   border-radius: 4px;
   background-color: #228b22;
 }
@@ -135,7 +131,7 @@ button {
   font-family: inherit;
   margin-top: 20px;
   /* margin-right: 28px; */
-  padding: 5px;
+  padding: 8px 15px;
   border-radius: 4px;
   /* background-color: #228b22; */
 
@@ -184,17 +180,6 @@ button {
 
 .a p {
   text-align: center;
-}
-
-.btn-check {
-  margin-top: 30px;
-  font-family: inherit;
-  display: block;
-  background-color: green;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 73px;
 }
 
 /* h1 {
