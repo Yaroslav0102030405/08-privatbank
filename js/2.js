@@ -85,7 +85,7 @@ function showRandomEmployeeSalary() {
 
   // h1El.textContent = `Доступні кошти - ${balance} грн.`;
   // h1El.textContent = `Доступні кошти - ${balance} грн.`;
-  h1El.innerHTML = `Доступні кошти - ${balance} грн. <audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/У вас є доступні кош.mp3" autoplay preload="auto"></audio>`;
+  h1El.innerHTML = `Доступні кошти ${balance} грн. <audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/У вас є доступні кош.mp3" autoplay preload="auto"></audio>`;
   inputEl.classList.add("active");
   btnEl2.classList.add("active");
   labelEl.classList.add("active");
@@ -104,7 +104,7 @@ function showBalance() {
   //   salary -= value;
 
   if (value === " " || value === 0) {
-    text.innerHTML = `Не коректна сума, спробуйте знову.<audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/Нажаль 0 це не корек.mp3" autoplay preload="auto"></audio>`;
+    text.innerHTML = `Не коректна сума, спробуйте знову.<audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/Нажаль це не коректн.mp3" autoplay preload="auto"></audio>`;
   } else if (value > balance) {
     text.textContent = `Недостатньо грошей для проведення операції`;
   } else if (
@@ -126,8 +126,8 @@ function showBalance() {
   ) {
     balance -= value;
     total += value;
-    text.innerHTML = `Знято з рахунку - ${value} грн. Дякуємо за візит. <audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/Дякуємо за візит .mp3" autoplay preload="auto"></audio>`;
-    h1El.textContent = `Залишок на вашому рахунку - ${balance} грн.`;
+    text.innerHTML = `Знято з рахунку ${value} грн. Дякуємо за візит. <audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/Операція пройшла усп.mp3" autoplay preload="auto"></audio>`;
+    h1El.textContent = `Залишок на вашому рахунку ${balance} грн.`;
 
     a.classList.add("active2");
 
