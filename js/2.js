@@ -83,11 +83,14 @@ let total = 0;
 function showRandomEmployeeSalary() {
   balance = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
 
-  h1El.textContent = `Доступні кошти - ${balance} грн.`;
+  // h1El.textContent = `Доступні кошти - ${balance} грн.`;
+  // h1El.textContent = `Доступні кошти - ${balance} грн.`;
+  h1El.innerHTML = `Доступні кошти - ${balance} грн. </audio><audio src="../music/reset.mp3" autoplay preload="auto"> <audio src="../music/У вас є доступні кош.mp3" autoplay preload="auto">`;
   inputEl.classList.add("active");
   btnEl2.classList.add("active");
   labelEl.classList.add("active");
   btnEl.disabled = true;
+  // e.target.innerHTML = `<audio src="./../music/click.mp3" autoplay preload="auto"></audio>`;
 }
 
 function showBalance() {
@@ -101,7 +104,7 @@ function showBalance() {
   //   salary -= value;
 
   if (value === " " || value === 0) {
-    text.textContent = `Не коректна сума, спробуйте знову.`;
+    text.innerHTML = `Не коректна сума, спробуйте знову. </audio><audio src="../music/reset.mp3" autoplay preload="auto"> <audio src="../music/Нажаль 0 це не корек.mp3" autoplay preload="auto"></audio>`;
   } else if (value > balance) {
     text.textContent = `Недостатньо грошей для проведення операції`;
   } else if (
@@ -123,17 +126,18 @@ function showBalance() {
   ) {
     balance -= value;
     total += value;
-    text.textContent = `Знято з рахунку - ${value} грн. Дякуємо за візит.`;
+    text.innerHTML = `Знято з рахунку - ${value} грн. Дякуємо за візит. </audio><audio src="../music/reset.mp3" autoplay preload="auto"> <audio src="../music/Дякуємо за візит .mp3" autoplay preload="auto">`;
     h1El.textContent = `Залишок на вашому рахунку - ${balance} грн.`;
 
     a.classList.add("active2");
     checkEl.textContent = `Квитанція про зняття коштів ${total} грн`;
   } else {
-    text.textContent = `Введіть суму кратну 100, 200, 500, 1000 `;
+    text.innerHTML = `Введіть суму кратну 100, 200, 500, 1000  </audio><audio src="../music/reset.mp3" autoplay preload="auto"> <audio src="../music/Введіть суму кратну .mp3" autoplay preload="auto"></audio>`;
   }
 }
 
 function onEnd() {
   a.classList.remove("active2");
   location.href = location.href;
+  end.innerHTML = `Візит <audio src="../music/reset.mp3" autoplay preload="auto">`;
 }

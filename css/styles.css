@@ -119,6 +119,7 @@ button {
 }
 
 .btn-end {
+  font-family: inherit;
   margin-top: 20px;
   margin-left: 28px;
   padding: 5px;
@@ -133,17 +134,20 @@ button {
 }
 
 .btn {
+  font-family: inherit;
   margin-top: 20px;
   margin-right: 28px;
   padding: 5px;
   border-radius: 4px;
-  background-color: #228b22;
-  /* background-color: #4cbb17; */
+  /* background-color: #228b22; */
+
+  background: linear-gradient(100deg, #2ecc71, #f1c40f, #e74c3c);
+  background-size: 400% 800%;
+  animation: move 3s ease infinite;
 }
 
 .btn:focus,
 .btn:hover {
-  /* background-color: yellow; */
   background-color: #00b300;
 }
 
@@ -208,7 +212,7 @@ button {
   animation: move 10s ease infinite;
 } */
 
-/* @keyframes move {
+@keyframes move {
   0% {
     background-position: 0, 0;
   }
@@ -224,7 +228,7 @@ button {
   100% {
     background-position: 0, 0;
   }
-} */
+}
 
 .check {
   font-size: 24px;
