@@ -20,9 +20,12 @@ button {
   cursor: url("../images/2.png"), auto;
 }
 
-/* .container {
-  padding-top: 50px;
-} */
+.container3 {
+  width: 280px;
+  margin: 0 auto;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+}
 
 .div-top {
   margin-right: auto;
@@ -69,12 +72,6 @@ button {
   background-color: green;
 }
 
-/* .div-button img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 .label-input {
   margin-top: 20px;
   display: none;
@@ -103,7 +100,7 @@ button {
   margin-right: auto;
   margin-left: auto;
   max-width: 370px;
-  height: 210px;
+  height: 260px;
   background-color: green;
 }
 
@@ -113,6 +110,7 @@ button {
 }
 
 .flex {
+  /* margin-top: 10px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,7 +119,7 @@ button {
 .btn-end {
   font-family: inherit;
   margin-top: 20px;
-  margin-left: 28px;
+  /* margin-left: 28px; */
   padding: 5px;
   border-radius: 4px;
   background-color: #228b22;
@@ -136,7 +134,7 @@ button {
 .btn {
   font-family: inherit;
   margin-top: 20px;
-  margin-right: 28px;
+  /* margin-right: 28px; */
   padding: 5px;
   border-radius: 4px;
   /* background-color: #228b22; */
@@ -168,13 +166,11 @@ button {
   padding: 5px;
 
   background-color: #fff;
-  /* width: 130px; */
   transform: translateY(-96%);
   transition: all 0.25s linear;
 }
 
 .a.active2 {
-  /* opacity: 1; */
   transform: translateY(0);
   transition: all 0.25s linear;
   border-bottom: dashed green;
@@ -188,6 +184,17 @@ button {
 
 .a p {
   text-align: center;
+}
+
+.btn-check {
+  margin-top: 30px;
+  font-family: inherit;
+  display: block;
+  background-color: green;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 73px;
 }
 
 /* h1 {
