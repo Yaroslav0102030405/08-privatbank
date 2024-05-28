@@ -85,7 +85,7 @@ function showRandomEmployeeSalary() {
 
   // h1El.textContent = `Доступні кошти - ${balance} грн.`;
   // h1El.textContent = `Доступні кошти - ${balance} грн.`;
-  h1El.innerHTML = `Доступні кошти ${balance} грн. <audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/У вас є доступні кош.mp3" autoplay preload="auto"></audio>`;
+  h1El.innerHTML = `Доступні кошти ${balance} грн. <audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/У вас є доступні кош (3).mp3" autoplay preload="auto"></audio>`;
   inputEl.classList.add("active");
   btnEl2.classList.add("active");
   labelEl.classList.add("active");
@@ -104,9 +104,9 @@ function showBalance() {
   //   salary -= value;
 
   if (value === " " || value === 0) {
-    text.innerHTML = `Не коректна сума, спробуйте знову.<audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/Нажаль це не коректн.mp3" autoplay preload="auto"></audio>`;
+    text.innerHTML = `Не коректна сума, спробуйте знову.<audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/Це не коректна сума .mp3" autoplay preload="auto"></audio>`;
   } else if (value > balance) {
-    text.textContent = `Недостатньо грошей для проведення операції`;
+    text.innerHTML = `Недостатньо коштів для проведення операції </audio> <audio src="../music/Недостатньо коштів д.mp3" autoplay preload="auto"></audio>`;
   } else if (
     value === 100 ||
     value === 200 ||
@@ -126,7 +126,7 @@ function showBalance() {
   ) {
     balance -= value;
     total += value;
-    text.innerHTML = `Знято з рахунку ${value} грн. Дякуємо за візит. <audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/Операція пройшла усп.mp3" autoplay preload="auto"></audio>`;
+    text.innerHTML = `Знято з рахунку ${value} грн. Дякуємо за візит. <audio src="../music/reset.mp3" autoplay preload="auto"></audio> <audio src="../music/Операція пройшла усп (1).mp3" autoplay preload="auto"></audio>`;
     h1El.textContent = `Залишок на вашому рахунку ${balance} грн.`;
 
     a.classList.add("active2");
@@ -140,5 +140,5 @@ function showBalance() {
 function onEnd() {
   a.classList.remove("active2");
   location.href = location.href;
-  end.innerHTML = `Візит <audio src="../music/reset.mp3" autoplay preload="auto"></audio>`;
+  // end.innerHTML = `Візит <audio src="../music/reset.mp3" autoplay preload="auto"></audio>`;
 }

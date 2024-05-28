@@ -127,19 +127,6 @@ button {
   background-color: #00b300;
 }
 
-.btn {
-  font-family: inherit;
-  margin-top: 20px;
-  /* margin-right: 28px; */
-  padding: 11px 24px;
-  border-radius: 4px;
-  /* background-color: #228b22; */
-
-  background: linear-gradient(100deg, #2ecc71, #f1c40f, #e74c3c);
-  background-size: 400% 800%;
-  animation: move 3s ease infinite;
-}
-
 .btn:focus,
 .btn:hover {
   background-color: #00b300;
@@ -182,46 +169,135 @@ button {
   text-align: center;
 }
 
-/* h1 {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(
-    45deg,
-    DeepPink,
-    BlueViolet,
-    Indigo,
-    Red,
-    DarkOrange,
-    Yellow,
-    Lime,
-    MediumTurquoise,
-    Aqua,
-    Blue,
-    Olive
-  );
-  background-size: 400% 400%;
-  animation: move 10s ease infinite;
-} */
+.check {
+  font-size: 24px;
+}
 
-@keyframes move {
+.flex {
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  font-family: inherit;
+  margin-top: 20px;
+  right: -1%;
+  /* margin-right: 28px; */
+  padding: 11px 24px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #228b22;
+  /* border: none; */
+
+  /* border-top: 2px solid red; */
+
+  /* animation: move 5s ease-in-out infinite; */
+  /* animation: an 2s linear infinite; */
+}
+
+/* @keyframes move {
   0% {
-    background-position: 0, 0;
+    background-color: #2ecc71;
   }
   25% {
-    background-position: 100%, 0;
+    background-color: #3498db;
   }
   50% {
-    background-position: 100%, 100%;
-  }
-  75% {
-    background-position: 0, 100%;
+    background-color: #f1c40f;
   }
   100% {
-    background-position: 0, 0;
+    background-color: #e74c3c;
+  }
+} */
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+}
+
+.btn span:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #3498db, #f1c40f, #e74c3c);
+
+  animation: an1 2s linear infinite;
+}
+
+@keyframes an1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
 
-.check {
-  font-size: 24px;
+.btn span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3498db, #f1c40f, #e74c3c);
+
+  animation: an2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes an2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.btn span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #3498db, #f1c40f, #e74c3c);
+
+  animation: an3 2s linear infinite;
+  animation-delay: 4s;
+}
+
+@keyframes an3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.btn span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #3498db, #f1c40f, #e74c3c);
+
+  animation: an4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes an4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
