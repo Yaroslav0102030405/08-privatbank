@@ -123,13 +123,9 @@ button {
 
 .btn-end:focus,
 .btn-end:hover {
-  /* background-color: orangered; */
-  background-color: #00b300;
-}
-
-.btn:focus,
-.btn:hover {
-  background-color: #00b300;
+  /* background-color: #00b300; */
+  background-color: black;
+  color: #fff;
 }
 
 .xxx {
@@ -137,7 +133,7 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-top: 2px solid grey;
+  border-top: 6px solid black;
   width: 170px;
 }
 
@@ -193,6 +189,11 @@ button {
 
   /* animation: move 5s ease-in-out infinite; */
   /* animation: an 2s linear infinite; */
+}
+
+.btn:focus,
+.btn:hover {
+  background-color: #00b300;
 }
 
 /* @keyframes move {
