@@ -116,7 +116,7 @@ button {
   font-family: inherit;
   margin-top: 20px;
   /* margin-left: 28px; */
-  padding: 11px 24px;
+  padding: 16px 24px;
   border-radius: 4px;
   background-color: #228b22;
 }
@@ -179,7 +179,7 @@ button {
   margin-top: 20px;
   right: -1%;
   /* margin-right: 28px; */
-  padding: 11px 24px;
+  padding: 16px 24px;
   border-radius: 4px;
   overflow: hidden;
   background-color: #228b22;
