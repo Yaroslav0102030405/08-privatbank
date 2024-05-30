@@ -71,87 +71,19 @@ const refs = {
   a: document.querySelector(".bottom-check"),
   photoCard: document.querySelector(".photo-card"),
   btnEl: document.querySelector(".btn-start"),
-  label2: document.querySelector(".label-input2"),
-  input2: document.querySelector("input[data-value2]"),
-  btnEl5: document.querySelector(".btn-confirm2"),
 };
-
-let start = 0;
-let total2 = 1;
 
 const minSalary = 500;
 const maxSalary = 1500;
 let balance = 0;
 let total = 0;
 
-const PASSWORD_CARD = 1234;
-
-// refs.btnEl.addEventListener("click", showRandomEmployeeSalary);
-// refs.btnEl2.addEventListener("click", showBalance);
-// refs.end.addEventListener("click", onEnd);
-refs.btnEl.addEventListener("click", onPinCode);
-refs.btnEl5.addEventListener("click", onClick);
+refs.btnEl.addEventListener("click", showRandomEmployeeSalary);
 refs.btnEl2.addEventListener("click", showBalance);
 refs.end.addEventListener("click", onEnd);
 
-// refs.photoCard.computedStyleMap.display = "none";
-const text = document.createElement("p");
-text.classList.add("text2");
-
-function onClick() {
-  const value2 = Number(refs.input2.value);
-  // refs.input2.value = null;
-
-  // const text = document.createElement("p");
-  // text.classList.add("text2");
-  if (value2 === PASSWORD_CARD) {
-    showRandomEmployeeSalary();
-    // text.innerHTML = `✔️ Dірний pin-код.`;
-  } else if (value2 !== PASSWORD_CARD) {
-    start += total2;
-    text.innerHTML = `❌ невірний pin-код. Спроба ${start} `;
-    refs.btnEl5.after(text);
-
-    const audio1Src = "../music/reset.mp3";
-    const audio2Src = "../music/невірний пін код Спр.mp3";
-    markupAudio(audio1Src, audio2Src, refs.btnEl5);
-    if (start === 3) {
-      refs.btnEl5.setAttribute("disabled", "");
-
-      const audio1Src = "../music/reset.mp3";
-      const audio2Src = "../music/невірний пін код Спр.mp3";
-      markupAudio(audio1Src, audio2Src, refs.btnEl5);
-    }
-  }
-}
-
-// const minSalary2 = 1000;
-// const maxSalary2 = 9000;
-// let balance2 = 0;
-
-function onPinCode() {
-  refs.photoCard.classList.add("none");
-  refs.btnEl.setAttribute("disabled", "");
-  refs.titleEl.textContent = "Введіть PIN-код для операцій";
-  refs.input2.classList.add("active");
-  refs.btnEl5.classList.add("active");
-  refs.label2.classList.add("active");
-
-  // balance2 = Number(
-  //   Math.random() * (maxSalary - minSalary) + minSalary
-  // ).toFixed();
-
-  // refs.label2.innerHTML = `PIN-код: ${balance2}`;
-
-  const audio1Src = "../music/reset.mp3";
-  const audio2Src = "../music/Введіть пін код.mp3";
-  markupAudio(audio1Src, audio2Src, refs.titleEl);
-}
-
 function showRandomEmployeeSalary() {
   refs.photoCard.classList.add("none");
-  refs.label2.classList.remove("active");
-  refs.btnEl5.classList.remove("active");
   balance = Number(Math.random() * (maxSalary - minSalary) + minSalary).toFixed(
     2
   );
@@ -160,8 +92,7 @@ function showRandomEmployeeSalary() {
   refs.inputEl.classList.add("active");
   refs.btnEl2.classList.add("active");
   refs.labelEl.classList.add("active");
-  // refs.btnEl.disabled = true;
-  text.innerHTML = `✔️ Вірний pin-код.`;
+  refs.btnEl.disabled = true;
 
   const audio1Src = "../music/reset.mp3";
   const audio2Src = "../music/У вас є доступні кош (3).mp3";
@@ -175,7 +106,7 @@ function showBalance() {
   const text = document.createElement("p");
   text.classList.add("text");
   refs.btnEl2.after(text);
-  // salary -= value;
+  //   salary -= value;
 
   if (value === " " || value === 0) {
     text.innerHTML = `Не коректна сума, спробуйте знову.`;

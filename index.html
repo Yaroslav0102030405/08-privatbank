@@ -46,6 +46,7 @@
           </h1>
           <img class="photo-card" width="230" src="./images/kreditna-karta-privatbanka-universalna-2.jpg" alt="credit-cart">
           <button class="btn0" type="button">Прововжити</button>
+         
           <label class="label-input">
             Введіть суму:
             <input
@@ -57,6 +58,24 @@
             />
           </label>
           <button class="btn-confirm">Підтвердити</button>
+          <form>
+          <label class="label-input2">
+            PIN-код: 1234
+            <input
+            type="password"  
+            minlength="4"
+            maxlength="4"
+            class="input2"
+            autofocus 
+            name="password" 
+              inputmode="numeric"
+              onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+              data-value2
+            />
+          </label>
+        </form>
+          <button class="btn-confirm2">Підтвердити PIN</button>
+     
         </div>
         <p
           style="
