@@ -61,100 +61,64 @@
 
 // console.log(total);
 
-const h1El = document.querySelector(".h1");
-const inputEl = document.querySelector("input[data-value]");
-const btnEl2 = document.querySelector(".btn2");
-const labelEl = document.querySelector(".label-input");
-const end = document.querySelector(".btn-end");
-const checkEl = document.querySelector(".check");
-const a = document.querySelector(".a");
-
-const photoCard = document.querySelector(".photo-card");
-
-const btnEl = document.querySelector(".btn");
-btnEl.addEventListener("click", showRandomEmployeeSalary);
-
-btnEl2.addEventListener("click", showBalance);
-end.addEventListener("click", onEnd);
+const refs = {
+  titleEl: document.querySelector(".title"),
+  inputEl: document.querySelector("input[data-value]"),
+  btnEl2: document.querySelector(".btn-confirm"),
+  labelEl: document.querySelector(".label-input"),
+  end: document.querySelector(".btn-end"),
+  checkEl: document.querySelector(".check"),
+  a: document.querySelector(".bottom-check"),
+  photoCard: document.querySelector(".photo-card"),
+  btnEl: document.querySelector(".btn-start"),
+};
 
 const minSalary = 500;
 const maxSalary = 1500;
 let balance = 0;
 let total = 0;
 
+refs.btnEl.addEventListener("click", showRandomEmployeeSalary);
+refs.btnEl2.addEventListener("click", showBalance);
+refs.end.addEventListener("click", onEnd);
+
 function showRandomEmployeeSalary() {
-  photoCard.classList.add("none");
+  refs.photoCard.classList.add("none");
   balance = Number(Math.random() * (maxSalary - minSalary) + minSalary).toFixed(
     2
   );
-  h1El.innerHTML = `Доступні кошти ${balance} грн.`;
+  refs.titleEl.innerHTML = `Доступні кошти ${balance} <span class="span-uan">грн</span>`;
 
-  inputEl.classList.add("active");
-  btnEl2.classList.add("active");
-  labelEl.classList.add("active");
-  btnEl.disabled = true;
+  refs.inputEl.classList.add("active");
+  refs.btnEl2.classList.add("active");
+  refs.labelEl.classList.add("active");
+  refs.btnEl.disabled = true;
 
   const audio1Src = "../music/reset.mp3";
   const audio2Src = "../music/У вас є доступні кош (3).mp3";
-  // markupAudio(audio1Src, audio2Src, h1El);
-  const audio1 = document.createElement("audio");
-  audio1.src = `${audio1Src}`;
-  audio1.autoplay = "autoplay";
-  audio1.preload = "auto";
-  console.log(audio1);
-
-  const audio2 = document.createElement("audio");
-  audio2.src = `${audio2Src}`;
-  audio2.autoplay = "autoplay";
-  audio2.preload = "auto";
-  h1El.after(audio1, audio2);
+  markupAudio(audio1Src, audio2Src, refs.titleEl);
 }
 
 function showBalance() {
-  const value = Number(inputEl.value);
-  inputEl.value = null;
-  console.log(value);
+  const value = Number(refs.inputEl.value);
+  refs.inputEl.value = null;
 
   const text = document.createElement("p");
   text.classList.add("text");
-  btnEl2.after(text);
+  refs.btnEl2.after(text);
   //   salary -= value;
 
   if (value === " " || value === 0) {
     text.innerHTML = `Не коректна сума, спробуйте знову.`;
     const audio1Src = "../music/reset.mp3";
     const audio2Src = "../music/Це не коректна сума .mp3";
-    // markupAudio(audio1Src, audio2Src);
-    // text.after(audio1, audio2);
-    const audio1 = document.createElement("audio");
-    audio1.src = `${audio1Src}`;
-    audio1.autoplay = "autoplay";
-    audio1.preload = "auto";
-    console.log(audio1);
-
-    const audio2 = document.createElement("audio");
-    audio2.src = `${audio2Src}`;
-    audio2.autoplay = "autoplay";
-    audio2.preload = "auto";
-    h1El.after(audio1, audio2);
+    markupAudio(audio1Src, audio2Src, text);
   } else if (value > balance) {
-    text.innerHTML = `Недостатньо коштів для проведення операції`;
+    text.innerHTML = `❌ Недостатньо коштів для проведення операції`;
 
     const audio1Src = "../music/reset.mp3";
     const audio2Src = "../music/Недостатньо коштів д.mp3";
-    // markupAudio(audio1Src, audio2Src);
-    // text.after(audio1, audio2);
-    const audio1 = document.createElement("audio");
-    audio1.src = `${audio1Src}`;
-    audio1.autoplay = "autoplay";
-    audio1.preload = "auto";
-    console.log(audio1);
-
-    const audio2 = document.createElement("audio");
-    audio2.src = `${audio2Src}`;
-    audio2.autoplay = "autoplay";
-    audio2.preload = "auto";
-    h1El.after(audio1, audio2);
+    markupAudio(audio1Src, audio2Src, text);
   } else if (
     value === 100 ||
     value === 200 ||
@@ -173,67 +137,42 @@ function showBalance() {
     value === 1500
   ) {
     // balance -= value;
-    const x = Number((balance -= value)).toFixed(2);
+    const balance2 = Number((balance -= value)).toFixed(2);
     total += value;
 
-    text.textContent = `Знято з рахунку ${value} грн. Дякуємо за візит.`;
+    text.textContent = `✔️ Знято з рахунку ${value} грн. Дякуємо за візит.`;
 
-    h1El.textContent = `Ваш залишок ${x} грн.`;
-    a.classList.add("active2");
+    refs.titleEl.textContent = `Ваш залишок ${balance2} грн.`;
+    refs.a.classList.add("active2");
 
-    checkEl.textContent = `Квитанція про зняття коштів ${total} грн`;
+    refs.checkEl.textContent = `Квитанція про зняття коштів ${total} грн`;
     const audio1Src = "../music/reset.mp3";
     const audio2Src = "../music/Операція пройшла усп (1).mp3";
-    // markupAudio(audio1Src, audio2Src);
-    // text.after(audio1, audio2);
-    const audio1 = document.createElement("audio");
-    audio1.src = `${audio1Src}`;
-    audio1.autoplay = "autoplay";
-    audio1.preload = "auto";
-    console.log(audio1);
-
-    const audio2 = document.createElement("audio");
-    audio2.src = `${audio2Src}`;
-    audio2.autoplay = "autoplay";
-    audio2.preload = "auto";
-    h1El.after(audio1, audio2);
+    markupAudio(audio1Src, audio2Src, refs.titleEl);
   } else {
     const audio1Src = "../music/reset.mp3";
     const audio2Src = "../music/Введіть суму кратну .mp3";
     text.textContent = `Введіть суму кратну 100, 200, 500, 1000`;
-
-    // markupAudio(audio1Src, audio2Src);
-    // text.after(audio1, audio2, text);
-    const audio1 = document.createElement("audio");
-    audio1.src = `${audio1Src}`;
-    audio1.autoplay = "autoplay";
-    audio1.preload = "auto";
-    console.log(audio1);
-
-    const audio2 = document.createElement("audio");
-    audio2.src = `${audio2Src}`;
-    audio2.autoplay = "autoplay";
-    audio2.preload = "auto";
-    h1El.after(audio1, audio2);
+    markupAudio(audio1Src, audio2Src, text);
   }
 }
 
+const markupAudio = (newAudio1, newAudio2, tag) => {
+  const audio1 = document.createElement("audio");
+  audio1.src = `${newAudio1}`;
+  audio1.autoplay = "autoplay";
+  audio1.preload = "auto";
+  console.log(audio1);
+
+  const audio2 = document.createElement("audio");
+  audio2.src = `${newAudio2}`;
+  audio2.autoplay = "autoplay";
+  audio2.preload = "auto";
+
+  tag.after(audio1, audio2);
+};
+
 function onEnd() {
-  a.classList.remove("active2");
+  refs.a.classList.remove("active2");
   location.href = location.href;
 }
-
-// const markupAudio = (newAudio1, newAudio2, content) => {
-//   const audio1 = document.createElement("audio");
-//   audio1.src = `${newAudio1}`;
-//   audio1.autoplay = "autoplay";
-//   audio1.preload = "auto";
-//   console.log(audio1);
-
-//   const audio2 = document.createElement("audio");
-//   audio2.src = `${newAudio2}`;
-//   audio2.autoplay = "autoplay";
-//   audio2.preload = "auto";
-
-//   return `${content}.after(audio1, audio2)`;
-// };

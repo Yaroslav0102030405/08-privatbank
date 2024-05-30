@@ -24,11 +24,13 @@ button {
   display: none;
 }
 
+.span-uan {
+  font-size: 22px;
+}
+
 .container3 {
   width: 280px;
   margin: 0 auto;
-  /* padding-left: 10px; */
-  /* padding-right: 10px; */
 }
 
 .div-top {
@@ -42,19 +44,16 @@ button {
 .div-top2 {
   width: 200px;
   height: 40px;
-  /* background-color: #fff; */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
 }
 
-.div-img {
-  /* padding-top: 40px; */
+.logo {
   margin-top: 20px;
-  /* background-color: #fff; */
 }
 
-.div-top-button {
+.screen {
   padding: 20px;
   width: 240px;
   height: 240px;
@@ -63,9 +62,10 @@ button {
   margin-right: auto;
   overflow: hidden;
   border: 2px solid black;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 }
 
-.div-top-button h1 {
+.screen h1 {
   font-size: 26px;
 }
 
@@ -83,7 +83,7 @@ button {
   font-size: 19px;
 }
 
-.btn2 {
+.btn-confirm {
   margin-top: 10px;
   display: none;
 }
@@ -96,7 +96,7 @@ button {
   display: block;
 }
 
-.b {
+.top-check {
   padding-top: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -106,12 +106,11 @@ button {
 }
 
 .text {
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 80px;
 }
 
 .flex {
-  /* margin-top: 10px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -120,20 +119,21 @@ button {
 .btn-end {
   font-family: inherit;
   margin-top: 20px;
-  /* margin-left: 28px; */
   padding: 16px 24px;
   border-radius: 4px;
   background-color: #228b22;
+
+  /* box-shadow: 5px 5px 5px red; */
+  /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2); */
 }
 
 .btn-end:focus,
 .btn-end:hover {
-  /* background-color: #00b300; */
   background-color: black;
   color: #fff;
 }
 
-.xxx {
+.hidden-check {
   overflow: hidden;
   display: block;
   margin-left: auto;
@@ -142,31 +142,35 @@ button {
   width: 170px;
 }
 
-.a {
-  /* opacity: 0; */
+.bottom-check {
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
 
   background-color: #fff;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
   transform: translateY(-96%);
   transition: all 0.25s linear;
 }
 
-.a.active2 {
+.bottom-check.active2 {
   transform: translateY(0);
   transition: all 0.25s linear;
   border-bottom: dashed green;
 }
 
-.a:hover {
+/* .logo {
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+} */
+
+.bottom-check:hover {
   transform: translateY(0);
   transition: all 0.25s linear;
   border-bottom: dashed green;
 }
 
-.a p {
+.bottom-check p {
   text-align: center;
 }
 
@@ -178,45 +182,23 @@ button {
   position: relative;
 }
 
-.btn {
+.btn-start {
   position: absolute;
   font-family: inherit;
   margin-top: 20px;
   right: -1%;
-  /* margin-right: 28px; */
   padding: 16px 24px;
   border-radius: 4px;
   overflow: hidden;
   background-color: #228b22;
-  /* border: none; */
-
-  /* border-top: 2px solid red; */
-
-  /* animation: move 5s ease-in-out infinite; */
-  /* animation: an 2s linear infinite; */
 }
 
-.btn:focus,
-.btn:hover {
+.btn-start:focus,
+.btn-start:hover {
   background-color: #00b300;
 }
 
-/* @keyframes move {
-  0% {
-    background-color: #2ecc71;
-  }
-  25% {
-    background-color: #3498db;
-  }
-  50% {
-    background-color: #f1c40f;
-  }
-  100% {
-    background-color: #e74c3c;
-  }
-} */
-
-.btn::before {
+.btn-start::before {
   content: "";
   position: absolute;
   width: 50%;
@@ -225,7 +207,7 @@ button {
   bottom: 2px;
 }
 
-.btn span:nth-child(1) {
+.btn-start span:nth-child(1) {
   position: absolute;
   width: 100%;
   height: 2px;
@@ -245,7 +227,7 @@ button {
   }
 }
 
-.btn span:nth-child(2) {
+.btn-start span:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
@@ -266,7 +248,7 @@ button {
   }
 }
 
-.btn span:nth-child(3) {
+.btn-start span:nth-child(3) {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -287,7 +269,7 @@ button {
   }
 }
 
-.btn span:nth-child(4) {
+.btn-start span:nth-child(4) {
   position: absolute;
   top: 0;
   left: 0;
@@ -307,3 +289,18 @@ button {
     transform: translateY(-100%);
   }
 }
+
+/* @keyframes move {
+  0% {
+    background-color: #2ecc71;
+  }
+  25% {
+    background-color: #3498db;
+  }
+  50% {
+    background-color: #f1c40f;
+  }
+  100% {
+    background-color: #e74c3c;
+  }
+} */
