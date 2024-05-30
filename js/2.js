@@ -71,7 +71,18 @@ const refs = {
   a: document.querySelector(".bottom-check"),
   photoCard: document.querySelector(".photo-card"),
   btnEl: document.querySelector(".btn-start"),
+  whiteBody: document.querySelector(".div-top"),
+  topCheck: document.querySelector(".top-check"),
 };
+
+refs.whiteBody.addEventListener("click", onWhiteBody);
+
+function onWhiteBody() {
+  refs.whiteBody.style.backgroundColor = "white";
+  refs.topCheck.style.backgroundColor = "white";
+  refs.end.style.backgroundColor = "white";
+  refs.btnEl.style.backgroundColor = "white";
+}
 
 const minSalary = 500;
 const maxSalary = 1500;
