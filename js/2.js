@@ -91,7 +91,6 @@ refs.btnEl5.addEventListener("click", onСonfirmPinСode);
 refs.btnEl2.addEventListener("click", showBalance);
 refs.end.addEventListener("click", onEnd);
 
-// refs.photoCard.computedStyleMap.display = "none";
 const text = document.createElement("p");
 text.classList.add("text2");
 
@@ -99,7 +98,6 @@ function onСonfirmPinСode() {
   const value2 = Number(refs.input2.value);
   if (value2 === PASSWORD_CARD) {
     showRandomEmployeeSalary();
-    // text.innerHTML = `✔️ Dірний pin-код.`;
   } else if (value2 !== PASSWORD_CARD) {
     start += total2;
     text.innerHTML = `❌ Невірний pin-код. Спроба ${start} `;
@@ -114,7 +112,6 @@ function onСonfirmPinСode() {
       markupAudio(audio1Src, audio2Src, refs.btnEl5);
     } else if (start === 3) {
       refs.btnEl5.setAttribute("disabled", "");
-
       text.innerHTML = `❌ Картка заблокована. Спроба ${start} `;
       refs.btnEl5.after(text);
 
