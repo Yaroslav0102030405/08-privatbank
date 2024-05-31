@@ -119,7 +119,7 @@ function onСonfirmPinСode() {
       refs.btnEl5.after(text);
 
       const audio1Src = "../music/reset.mp3";
-      const audio2Src = "../music/Картка заблокована.mp3";
+      const audio2Src = "../music/Ваша картка заблоков.mp3";
       markupAudio(audio1Src, audio2Src, refs.btnEl5);
     }
   }
@@ -132,7 +132,7 @@ function onСonfirmPinСode() {
 function onEnterPinCode() {
   refs.photoCard.classList.add("none");
   refs.btnEl.setAttribute("disabled", "");
-  refs.titleEl.textContent = "Введіть PIN-код для операцій";
+  refs.titleEl.textContent = "Введіть PIN-код для операції...";
   refs.input2.classList.add("active");
   refs.btnEl5.classList.add("active");
   refs.label2.classList.add("active");
