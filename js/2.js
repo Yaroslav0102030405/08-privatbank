@@ -219,6 +219,11 @@ function showBalance() {
     const audio1Src = "../music/reset.mp3";
     const audio2Src = "../music/Операція пройшла усп (1).mp3";
     markupAudio(audio1Src, audio2Src, refs.titleEl);
+    if (balance < 100) {
+      const audio1Src = "../music/reset.mp3";
+      const audio2Src = "../music/Операція пройшла усп.mp3";
+      markupAudio(audio1Src, audio2Src, refs.titleEl);
+    }
   } else {
     const audio1Src = "../music/reset.mp3";
     const audio2Src = "../music/Введіть суму кратну .mp3";
