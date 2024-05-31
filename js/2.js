@@ -86,11 +86,8 @@ let total = 0;
 
 const PASSWORD_CARD = 1234;
 
-// refs.btnEl.addEventListener("click", showRandomEmployeeSalary);
-// refs.btnEl2.addEventListener("click", showBalance);
-// refs.end.addEventListener("click", onEnd);
-refs.btnEl.addEventListener("click", onPinCode);
-refs.btnEl5.addEventListener("click", onClick);
+refs.btnEl.addEventListener("click", onEnterPinCode);
+refs.btnEl5.addEventListener("click", onСonfirmPinСode);
 refs.btnEl2.addEventListener("click", showBalance);
 refs.end.addEventListener("click", onEnd);
 
@@ -98,28 +95,31 @@ refs.end.addEventListener("click", onEnd);
 const text = document.createElement("p");
 text.classList.add("text2");
 
-function onClick() {
+function onСonfirmPinСode() {
   const value2 = Number(refs.input2.value);
-  // refs.input2.value = null;
-
-  // const text = document.createElement("p");
-  // text.classList.add("text2");
   if (value2 === PASSWORD_CARD) {
     showRandomEmployeeSalary();
     // text.innerHTML = `✔️ Dірний pin-код.`;
   } else if (value2 !== PASSWORD_CARD) {
     start += total2;
-    text.innerHTML = `❌ невірний pin-код. Спроба ${start} `;
+    text.innerHTML = `❌ Невірний pin-код. Спроба ${start} `;
     refs.btnEl5.after(text);
-
-    const audio1Src = "../music/reset.mp3";
-    const audio2Src = "../music/невірний пін код Спр.mp3";
-    markupAudio(audio1Src, audio2Src, refs.btnEl5);
-    if (start === 3) {
-      refs.btnEl5.setAttribute("disabled", "");
-
+    if (start === 1) {
       const audio1Src = "../music/reset.mp3";
       const audio2Src = "../music/невірний пін код Спр.mp3";
+      markupAudio(audio1Src, audio2Src, refs.btnEl5);
+    } else if (start === 2) {
+      const audio1Src = "../music/reset.mp3";
+      const audio2Src = "../music/невірний пін код Спр.mp3";
+      markupAudio(audio1Src, audio2Src, refs.btnEl5);
+    } else if (start === 3) {
+      refs.btnEl5.setAttribute("disabled", "");
+
+      text.innerHTML = `❌ Картка заблокована. Спроба ${start} `;
+      refs.btnEl5.after(text);
+
+      const audio1Src = "../music/reset.mp3";
+      const audio2Src = "../music/Картка заблокована.mp3";
       markupAudio(audio1Src, audio2Src, refs.btnEl5);
     }
   }
@@ -129,7 +129,7 @@ function onClick() {
 // const maxSalary2 = 9000;
 // let balance2 = 0;
 
-function onPinCode() {
+function onEnterPinCode() {
   refs.photoCard.classList.add("none");
   refs.btnEl.setAttribute("disabled", "");
   refs.titleEl.textContent = "Введіть PIN-код для операцій";
@@ -162,6 +162,7 @@ function showRandomEmployeeSalary() {
   refs.labelEl.classList.add("active");
   // refs.btnEl.disabled = true;
   text.innerHTML = `✔️ Вірний pin-код.`;
+  refs.btnEl5.after(text);
 
   const audio1Src = "../music/reset.mp3";
   const audio2Src = "../music/У вас є доступні кош (3).mp3";
