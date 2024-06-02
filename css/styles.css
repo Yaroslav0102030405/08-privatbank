@@ -321,29 +321,3 @@ button {
     background-color: #e74c3c;
   }
 } */
-
-/* .colors {
-  position: fixed;
-  right: 0;
-  bottom: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.color-red {
-  width: 30px;
-  height: 30px;
-  background-color: #e74c3c;
-}
-
-.color-blue {
-  width: 30px;
-  height: 30px;
-  background-color: #3498db;
-}
-
-.color-orange {
-  width: 30px;
-  height: 30px;
-  background-color: orange;
-} */
