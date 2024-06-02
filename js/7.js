@@ -25,3 +25,11 @@ const sub = function (x, y) {
 
 doMath(2, 3, add);
 doMath(10, 8, sub);
+
+const onReguestSuccess = function (response) {
+  console.log(response);
+};
+
+fetch("../data/1.json")
+  .then((res) => res.json())
+  .then(onReguestSuccess);
