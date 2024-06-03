@@ -16,8 +16,7 @@ body {
   padding: 0;
 }
 
-.container {
-  /* width: 1230px; */
+/* .container {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -39,7 +38,7 @@ body {
   .container {
     width: 1200px;
   }
-}
+} */
 
 button {
   cursor: url("../images/2.png"), auto;
