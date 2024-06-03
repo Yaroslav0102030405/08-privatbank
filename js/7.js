@@ -85,25 +85,54 @@ const fnC = function (parameter) {
 };
 
 // console.log(fnC(555));
-const fnB1 = fnC(555);
-fnB1();
-console.log(fnB1);
+// const fnB1 = fnC(555);
+// fnB1();
+// console.log(fnB1);
 
-const myLibFactory = function () {
-  let value = 0;
+// const myLibFactory = function () {
+//   let value = 0;
 
-  const add = function (num) {
-    value += num;
-  };
+//   const add = function (num) {
+//     value += num;
+//   };
 
-  return {
-    add,
-    getValue() {
-      return value;
-    },
-  };
+//   return {
+//     add,
+//     getValue() {
+//       return value;
+//     },
+//   };
+// };
+
+// const myLib = myLibFactory();
+// myLib.add(10);
+// console.log(myLib.getValue());
+
+// стрелочные функции - это всегдафункциональные выражения
+const logMessage = (message) => {
+  console.log(message);
 };
 
-const myLib = myLibFactory();
-myLib.add(10);
-console.log(myLib.getValue());
+logMessage("Привет!");
+
+const greet = () => {
+  console.log("Привет!");
+};
+
+greet();
+
+// Явный возврат
+const add1 = (a, b) => {
+  return a + b;
+};
+
+console.log(add1(2, 3));
+
+// неявный возврат
+const add2 = (a, b) => a + b;
+console.log(add2(5, 4));
+// стрелки не бывают методами обьекта потмоу что this у них будет undefined
+// стрелка не может быть конструктором
+// усли нужно вренуть обьект и без return тогда через выражение () - через круглые скобки
+
+// юзаеться map filter reduce find
