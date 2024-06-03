@@ -137,7 +137,7 @@ button {
   font-family: inherit;
   margin-top: 20px;
   padding: 16px 24px;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #228b22;
 
   /* box-shadow: 5px 5px 5px red; */
@@ -205,7 +205,7 @@ button {
   margin-top: 20px;
   right: -1%;
   padding: 16px 24px;
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   background-color: #228b22;
 }
@@ -321,3 +321,8 @@ button {
     background-color: #e74c3c;
   }
 } */
+
+input {
+  padding: 3px;
+  /* border-radius: 4px; */
+}
