@@ -16,6 +16,31 @@ body {
   padding: 0;
 }
 
+.container {
+  /* width: 1230px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 button {
   cursor: url("../images/2.png"), auto;
 }
@@ -307,6 +332,44 @@ button {
   }
 }
 
+/* .super {
+  display: flex;
+  align-items: center;
+} */
+
+.super {
+  display: flex;
+  justify-content: center;
+}
+
+/* .super li {
+  display: flex;
+} */
+
+.title-btn {
+  display: flex;
+  background-color: transparent;
+  border: none;
+}
+
+.icon-btn {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.btn-icon1 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-icon2 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
 /* @keyframes move {
   0% {
     background-color: #2ecc71;
@@ -321,3 +384,13 @@ button {
     background-color: #e74c3c;
   }
 } */
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+}
