@@ -322,7 +322,7 @@ button {
   }
 } */
 
-input {
+.input {
   padding: 3px;
   /* border-radius: 4px; */
 }
