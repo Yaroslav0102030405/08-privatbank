@@ -71,6 +71,26 @@ for (const [name, rating] of entries) {
   console.log(name, rating);
 }
 
+// const profile = {
+//   name1: "Jacgues Gluke ",
+//   tag: "Jgluke",
+//   location: "Ocho Rios",
+//   starts: {
+//     followers: 56001,
+//     likes: 1308,
+//   },
+// };
+
+// const { name1, ...restProps } = profile;
+// console.log(name1);
+// console.log(restProps);
+
+// // обьект настроек
+// const showProfileInfo = function (userProfile) {
+//   const { nqmes1, tag, location, ...restProps } = profile;
+// };
+// showProfileInfo(profile);
+
 const profile = {
   name1: "Jacgues Gluke ",
   tag: "Jgluke",
@@ -80,13 +100,33 @@ const profile = {
     likes: 1308,
   },
 };
-
-const { name1, ...restProps } = profile;
-console.log(name1);
-console.log(restProps);
-
-// обьект настроек
-const showProfileInfo = function (userProfile) {
-  const { nqmes1, tag, location, ...restProps } = profile;
+const profile2 = {
+  name1: "Jacgues Gluke ",
+  tag: "Jgluke",
+  location: "Ocho Rios",
+  starts: {
+    followers: 56001,
+    likes: 1308,
+  },
 };
-showProfileInfo(profile);
+
+const showProfileInfo = function (useProfile) {
+  const {
+    name1,
+    tag,
+    location,
+    starts: { followers, likes },
+  } = profile;
+
+  return `<h1>${name1}</h1>
+  <p>${tag}</p>
+  <h2>${location}</h2>
+  <p>${followers}</p>
+  <p>${likes}</p>`;
+};
+
+const markup = showProfileInfo(profile);
+const markup2 = showProfileInfo(profile2);
+
+document.body.insertAdjacentHTML("afterbegin", markup);
+document.body.insertAdjacentHTML("afterbegin", markup2);
