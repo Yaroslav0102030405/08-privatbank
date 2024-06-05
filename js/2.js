@@ -74,6 +74,7 @@ const refs = {
   label2: document.querySelector(".label-input2"),
   input2: document.querySelector("input[data-value2]"),
   btnEl5: document.querySelector(".btn-confirm2"),
+  formEl: document.querySelector(".js-form"),
 };
 
 let start = 0;
@@ -102,6 +103,7 @@ function onСonfirmPinСode() {
     start += total2;
     text.innerHTML = `❌ Невірний pin-код. Спроба ${start} `;
     refs.btnEl5.after(text);
+    refs.formEl.reset();
     if (start === 1) {
       const audio1Src = "../music/reset.mp3";
       const audio2Src = "../music/невірний пін код Спр.mp3";
