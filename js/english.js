@@ -8,6 +8,7 @@ const btnSubmit = document.querySelector(".submit");
 const dataHello = document.querySelector('[data-hello="hello"]');
 const dataHi = document.querySelector('[data-hi="hi"]');
 const success = document.querySelector(".success");
+const item01 = document.querySelector(".item-01");
 
 iconBtn1.addEventListener("click", () => {
   item1.src = "../audio/Hello.mp3";
@@ -35,6 +36,7 @@ function onFormSubmit(e) {
     success.textContent = "✔️ Правільна відповідь";
     item3.src = "../audio/Правильна відповідь.mp3";
     formSubmit.reset();
+    item01.classList.add("gray");
   } else {
     success.textContent = "❌😈 Не правильна відповідь";
     item3.src = "../audio/Відповідь не правиль.mp3";

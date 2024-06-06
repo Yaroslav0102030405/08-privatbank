@@ -71,7 +71,7 @@ p {
   border: 2px solid black;
   border-radius: 10px;
   /* background-color: white; */
-  background-color: #001d5f;
+  /* background-color: #001d5f; */
   /* background-color: #f4c144; */
 }
 
@@ -79,9 +79,13 @@ li {
   width: 300px;
 }
 
-.super li:nth-child(1) {
+.yellow {
   background-color: #f4c144;
 }
+
+/* .super li:nth-child(1) {
+  background-color: #f4c144;
+} */
 
 .super li:nth-child(2) {
   background-color: tomato;
@@ -108,6 +112,8 @@ li {
   background-color: transparent;
   border: none;
   font-size: 38px;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 .icon-btn {
@@ -138,6 +144,11 @@ li {
   color: white;
 }
 
+/* .x {
+  border: 2px solid black;
+  border-radius: 10px;
+} */
+
 /* @keyframes move {
     0% {
       background-color: #2ecc71;
@@ -165,4 +176,8 @@ input {
   border-left: none;
   border-right: none;
   background-color: transparent;
+}
+
+.item-01.gray {
+  background-color: #d3d3d3;
 }
