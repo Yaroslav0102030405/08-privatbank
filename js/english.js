@@ -36,7 +36,8 @@ function onFormSubmit(e) {
     success.textContent = "✔️ Правільна відповідь";
     item3.src = "../audio/Правильна відповідь.mp3";
     formSubmit.reset();
-    item01.classList.add("gray");
+    // item01.classList.add("gray");
+    item01.classList.add("gray2");
   } else {
     success.textContent = "❌😈 Не правильна відповідь";
     item3.src = "../audio/Відповідь не правиль.mp3";

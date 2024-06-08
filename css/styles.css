@@ -223,6 +223,9 @@ button {
   left: 2px;
   bottom: 2px;
 }
+span {
+  color: #3498db;
+}
 
 .btn-start span:nth-child(1) {
   position: absolute;
