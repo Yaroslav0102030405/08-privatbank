@@ -134,8 +134,16 @@ const tweeps = [
 ];
 
 const tagsTweep = tweeps.reduce((acc, tweep) => {
-  acc.push(...tweep.tags);
-
-  return acc;
+  return [...acc, ...tweep.tags];
 }, []);
 console.log(tagsTweep);
+
+const tagsStats = tagsTweep.reduce((acc, tag) => {
+  // console.log([tag]);
+  return {
+    ...acc,
+    [tag]: acc[tag] ? acc[tag] + 1 : 1,
+  };
+}, {});
+
+console.log(tagsStats);
