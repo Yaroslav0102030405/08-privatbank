@@ -102,48 +102,104 @@
 
 // console.log(totalSalary);
 
-const fruits = [
-  { id: "player-1", name: "apples", quantity: 200, online: true },
-  { id: "player-2", name: "grapes", quantity: 150, online: false },
-  { id: "player-3", name: "bananas", quantity: 100, online: true },
-];
+// const fruits = [
+//   { id: "player-1", name: "apples", quantity: 200, online: true },
+//   { id: "player-2", name: "grapes", quantity: 150, online: false },
+//   { id: "player-3", name: "bananas", quantity: 100, online: true },
+// ];
 
-const totalQuantity = fruits.reduce((acc, fruit) => {
-  return acc + fruit.quantity;
-}, 0);
+// const totalQuantity = fruits.reduce((acc, fruit) => {
+//   return acc + fruit.quantity;
+// }, 0);
 
-console.log(totalQuantity);
+// console.log(totalQuantity);
 
-const cart = [
-  { label: "Apples", price: 100, quantity: 2 },
-  { label: "Bananas", price: 120, quantity: 3 },
-  { label: "Lemons", price: 70, quantity: 4 },
-];
+// const cart = [
+//   { label: "Apples", price: 100, quantity: 2 },
+//   { label: "Bananas", price: 120, quantity: 3 },
+//   { label: "Lemons", price: 70, quantity: 4 },
+// ];
 
-const totalAmount = cart.reduce((acc, { price, quantity }) => {
-  return acc + price * quantity;
-}, 0);
+// const totalAmount = cart.reduce((acc, { price, quantity }) => {
+//   return acc + price * quantity;
+// }, 0);
 
-console.log(totalAmount);
+// console.log(totalAmount);
 
-const tweeps = [
-  { id: 1, likes: 5, tags: ["js", "node.js"] },
-  { id: 2, likes: 2, tags: ["html", "css"] },
-  { id: 3, likes: 17, tags: ["html", "css"] },
-  { id: 4, likes: 10, tags: ["js", "react"] },
-];
+// const tweeps = [
+//   { id: 1, likes: 5, tags: ["js", "node.js"] },
+//   { id: 2, likes: 2, tags: ["html", "css"] },
+//   { id: 3, likes: 17, tags: ["html", "css"] },
+//   { id: 4, likes: 10, tags: ["js", "react"] },
+// ];
 
-const tagsTweep = tweeps.reduce((acc, tweep) => {
-  return [...acc, ...tweep.tags];
-}, []);
-console.log(tagsTweep);
+// const tags = tweeps.flatMap((t) => t.tags);
+// console.log(tags);
 
-const tagsStats = tagsTweep.reduce((acc, tag) => {
-  // console.log([tag]);
-  return {
-    ...acc,
-    [tag]: acc[tag] ? acc[tag] + 1 : 1,
-  };
-}, {});
+// const tagsTweep = tweeps.reduce((acc, tweep) => {
+//   return [...acc, ...tweep.tags];
+// }, []);
+// console.log(tagsTweep);
 
-console.log(tagsStats);
+// const tagsStats = tagsTweep.reduce((acc, tag) => {
+//   // console.log([tag]);
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+
+// console.log(tagsStats);
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const numberSortA = numbers.sort((a, b) => a - b);
+// console.log(numberSortA);
+
+// const numberSortB = numbers.sort((a, b) => b - a);
+// console.log(numberSortB);
+
+// console.log([1, 2, 3, 4, 5].reverse());
+
+// const fruits = [
+//   { id: "player-1", name: "Apples", quantity: 200, online: true },
+//   { id: "player-2", name: "Grapes", quantity: 150, online: false },
+//   { id: "player-3", name: "Bananas", quantity: 100, online: true },
+// ];
+
+// const sortedByPrevQuantity = [...fruits].sort((prevQuantity, nextQuantity) => {
+//   return prevQuantity.quantity - nextQuantity.quantity;
+// });
+
+// console.log(sortedByPrevQuantity);
+
+// const sortedByNextQuantity = [...fruits].sort((prevQuantity, nextQuantity) => {
+//   return nextQuantity.quantity - prevQuantity.quantity;
+// });
+
+// console.log(sortedByNextQuantity);
+
+// const byName = [...fruits].sort((a, b) => {
+//   const result = a.name[0] > b.name[0];
+
+//   if (result) {
+//     return 1;
+//   }
+
+//   if (!result) {
+//     return -1;
+//   }
+// });
+
+// console.log(byName);
+
+const numbers = [10, 25, 3, 4, 5];
+
+const filterMapSortNumbers = numbers
+  .filter((num) => num > 2)
+  .map((num) => num * 2)
+  .sort((a, b) => a - b);
+
+console.log(filterMapSortNumbers);
+
+// библиотека лоадеш https://lodash.com/
