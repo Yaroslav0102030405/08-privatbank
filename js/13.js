@@ -44,15 +44,32 @@ const colorPickerOptions = [
 
 // const elements = [];
 
-const elements = colorPickerOptions.map((option) => {
-  const buttonEl = document.createElement("button");
-  buttonEl.type = "button";
-  buttonEl.textContent = option.label;
-  buttonEl.style.backgroundColor = option.color;
-  buttonEl.style.width = "75px";
-  buttonEl.style.height = "50px";
+// const elements = colorPickerOptions.map((option) => {
+//   const buttonEl = document.createElement("button");
+//   buttonEl.type = "button";
+//   buttonEl.textContent = option.label;
+//   buttonEl.style.backgroundColor = option.color;
+//   buttonEl.style.width = "75px";
+//   buttonEl.style.height = "50px";
 
-  return buttonEl;
-});
+//   return buttonEl;
+// });
+
+// picker.append(...elements);
+
+const makeColorPickerOptions = (options) => {
+  return options.map((option) => {
+    const buttonEl = document.createElement("button");
+    buttonEl.type = "button";
+    buttonEl.textContent = option.label;
+    buttonEl.style.backgroundColor = option.color;
+    buttonEl.style.width = "75px";
+    buttonEl.style.height = "50px";
+
+    return buttonEl;
+  });
+};
+
+const elements = makeColorPickerOptions(colorPickerOptions);
 
 picker.append(...elements);
