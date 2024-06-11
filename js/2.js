@@ -160,7 +160,7 @@ function showRandomEmployeeSalary() {
   refs.btnEl2.classList.add("active");
   refs.labelEl.classList.add("active");
   // refs.btnEl.disabled = true;
-  text.innerHTML = `✔️ Вірний pin-код.`;
+  text.innerHTML = `✔️ Вірний pin-код`;
   refs.btnEl5.after(text);
 
   const audio1Src = "../music/reset.mp3";
@@ -211,7 +211,7 @@ function showBalance() {
 
     text.textContent = `✔️ Знято з рахунку ${value} грн. Дякуємо за візит.`;
 
-    refs.titleEl.textContent = `Ваш залишок ${balance2} грн.`;
+    refs.titleEl.textContent = `Ваш залишок ${balance2} грн`;
     refs.a.classList.add("active2");
 
     refs.checkEl.textContent = `Квитанція про зняття коштів ${total} грн`;
