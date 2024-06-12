@@ -2,9 +2,9 @@ const refs = {
   iconBtn1: document.querySelector(".btn-icon1"),
   iconBtn1: document.querySelector(".btn-icon1"),
   iconBtn2: document.querySelector(".btn-icon2"),
-  item1: document.querySelector(".item-1"),
-  item2: document.querySelector(".item-2"),
-  item3: document.querySelector(".item-3"),
+  item1: document.querySelector(".audio-hello"),
+  item2: document.querySelector(".audio-hi"),
+  item3: document.querySelector(".audio-answer"),
   formSubmit: document.querySelector(".js-form"),
   btnSubmit: document.querySelector(".submit"),
   dataHello: document.querySelector('[data-hello="hello"]'),
@@ -80,7 +80,7 @@ function onFormSubmit(e) {
     onSmileyError(refs.inputEl);
     onSmileyError(refs.inputEl2);
     onAudioError();
-    // success.textContent = "❌ Не правильна відповідь";
+    refs.success.textContent = "❌ Не правильна відповідь";
   }
 }
 
