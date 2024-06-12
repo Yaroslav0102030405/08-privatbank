@@ -59,7 +59,7 @@ function onFormSubmit(e) {
     // inputEl.value = `${inputEl.value} ✔️`;
     // inputEl2.value = `${inputEl2.value} ✔️`;
     refs.success.innerHTML =
-      "✔️ Правільна відповідь <br/>Будь ласка перeходьте до уроку 2";
+      "✔️ Правільна відповідь <br/>Будь ласка перeходьте <br /> до уроку 2";
     refs.item01.classList.add("gray2");
   } else if (hello === "Hello ✔️") {
     onAudioError();

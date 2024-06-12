@@ -16,48 +16,49 @@
   <body>
     <section>
       <div class="container">
-        <h1 style="text-align: center">Англійська для 1 класу</h1>
+        <h1 class="title" lang="uk">Англійська для 1 класу</h1>
         <ul class="list">
           <li class="list-item item-01">
-            <h2 style="text-align: center; color: #001d5f">Урок 1 Hello!</h2>
-            <p>Послухай та повтори</p>
+            <h2 class="subtitle" lang="uk">Урок 1<span> Hello!</span></h2>
+            <p class="subtext" lang="uk">Послухай та повтори 🤔</p>
+            <!-- block-boy -->
             <div class="wapper-boy">
               <img
                 loading="lazy"
                 width="100"
                 height="100"
                 src="./images/man-02.png"
-                alt="man-01"
+                alt="image-boy"
               />
-
-              <div class="title-btn a btn button">
-                <div class="button-left">
+              <div class="music-block blue">
+                <div class="voice">
                   <svg class="btn-icon1" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
-                <div class="button-right">
-                  <p style="color: white">Hello</p>
-                  <p>Привіт</p>
+                <div class="voice-content">
+                  <p class="voice-text-en">Hello</p>
+                  <p lang="uk">Привіт</p>
                 </div>
               </div>
             </div>
 
             <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <!-- block-girl -->
             <div class="wapper-girl">
-              <div class="title-btn b button">
-                <div class="btton-left">
+              <div class="music-block">
+                <div class="voice">
                   <svg class="btn-icon2" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
-                <div class="button-right">
-                  <p style="color: white">Hi</p>
-                  <p>Привіт</p>
+                <div class="voice-content">
+                  <p class="voice-text-en">Hi</p>
+                  <p lang="uk">Привіт</p>
                 </div>
               </div>
               <img
@@ -70,11 +71,13 @@
             </div>
 
             <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
-            <p style="margin-bottom: 10px">Спробуй написати</p>
+
+            <p class="subtitle-write" lang="uk">Спробуй написати ✍️</p>
 
             <form class="js-form">
+              <!-- <div class="form-group"> -->
+              <!-- <p class="subtitle-write" lang="uk">Спробуй написати</p> -->
               <label class="form-label">
-                <!-- <span class="label-text">Hello</span> -->
                 <input
                   class="js-input"
                   type="text"
@@ -84,8 +87,8 @@
                   data-hello="hello"
                 />
               </label>
+
               <label>
-                <!-- <span class="label-text">Hi</span> -->
                 <input
                   class="js-input2"
                   type="text"
@@ -96,8 +99,10 @@
                   data-hi="hi"
                 />
               </label>
+              <!-- </div> -->
 
-              <button class="submit button" type="submit">Перевірити</button>
+              <button class="submit" type="submit">🗝️ Перевірити 🔐</button>
+
               <p class="success"></p>
               <audio
                 class="audio-answer"
