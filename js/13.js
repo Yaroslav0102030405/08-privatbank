@@ -73,3 +73,19 @@ const makeColorPickerOptions = (options) => {
 const elements = makeColorPickerOptions(colorPickerOptions);
 
 picker.append(...elements);
+
+const colors = [{ hex: "#f4c144" }, { hex: "#3498db" }];
+
+const colorsEl = document.querySelector(".colors");
+const markup = createColorCardsMarkup(colors);
+
+function createColorCardsMarkup(colors) {
+  return colors
+    .map(({ hex }) => {
+      return `<div class="color"
+      style="background-color: ${hex}"></div>`;
+    })
+    .join("");
+}
+
+colorsEl.insertAdjacentHTML("beforeend", markup);
