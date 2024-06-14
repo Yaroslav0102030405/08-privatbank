@@ -53,7 +53,10 @@ function onFormSubmit(e) {
   const hello = formElements.hello.value;
   const hi = formElements.hi.value;
 
-  if (hello === "Hello ✔️" && hi === "Hi ✔️") {
+  if (
+    (hello === "Hello ✔️" && hi === "Hi ✔️") ||
+    (hello === "hello ✔️" && hi === "hi ✔️")
+  ) {
     // item3.src = "../audio/Правильна відповідь.mp3";
     onAudioSuccess();
     // inputEl.value = `${inputEl.value} ✔️`;
@@ -93,7 +96,10 @@ const onAudioError = () => {
 };
 
 function onInput(event) {
-  if ((refs.inputEl.textContent = event.currentTarget.value === "Hello")) {
+  if (
+    event.currentTarget.value === "Hello" ||
+    event.currentTarget.value === "hello"
+  ) {
     // formSubmit.reset();
     // inputEl.value = `${inputEl.value} ✔️`;
     onSmileySuccess(refs.inputEl);
@@ -101,7 +107,11 @@ function onInput(event) {
 }
 
 function onInput2(event) {
-  if ((refs.inputEl2.textContent = event.currentTarget.value === "Hi")) {
+  // refs.inputEl2.textContent = event.currentTarget.value === "Hi"
+  if (
+    event.currentTarget.value === "Hi" ||
+    event.currentTarget.value === "hi"
+  ) {
     // inputEl2.value = `${inputEl2.value} ✔️`;
     onSmileySuccess(refs.inputEl2);
   }

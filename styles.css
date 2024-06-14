@@ -283,3 +283,7 @@ input::placeholder {
 .item-01.gray2 {
   background-color: blueviolet;
 }
+
+.emoji {
+  font-size: 20px;
+}
