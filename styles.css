@@ -192,11 +192,11 @@ img {
 } */
 
 .list li:nth-child(2) {
-  background-color: tomato;
+  background-color: #2ecc71;
 }
 
 .list li:nth-child(3) {
-  background-color: #2ecc71;
+  background-color: tomato;
 }
 
 .list li:nth-child(4) {
@@ -208,7 +208,11 @@ img {
 }
 
 .list li:last-child {
-  background-color: #ca8f21;
+  background-color: #ff7f50;
+}
+
+.yellow {
+  background-color: #f4c144;
 }
 
 .icon-btn {
@@ -321,4 +325,19 @@ input {
 
 .emoji {
   font-size: 20px;
+}
+
+.block {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.block-girl {
+  /* flex-direction: column; */
+  align-items: flex-end;
+  flex-direction: column-reverse;
+}
+
+.magrin-right {
+  margin-right: 0;
 }

@@ -79,8 +79,6 @@
             </p>
 
             <form class="js-form">
-              <!-- <div class="form-group"> -->
-              <!-- <p class="subtitle-write" lang="uk">Спробуй написати</p> -->
               <label class="form-label">
                 <input
                   class="js-input"
@@ -103,7 +101,6 @@
                   data-hi="hi"
                 />
               </label>
-              <!-- </div> -->
 
               <button class="submit" type="submit">
                 Перевірити <span class="emoji">🤔</span>
@@ -127,28 +124,50 @@
           </li>
           <li>
             <h2>Урок 2 What is your name?</h2>
-            <p>Послухай та повтори</p>
-            <img
-              loading="lazy"
-              width="100"
-              height="100"
-              src="./images/man-02.png"
-              alt="man-01"
-            />
+            <p class="subtext" lang="uk">
+              <span class="emoji">📌</span>Послухай та повтори
+            </p>
+            <!-- block-boy -->
+            <div class="wapper-boy block">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1 magrin-right" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">What is your name?</p>
+                  <p lang="uk">Як тебе звати?</p>
+                </div>
+              </div>
+            </div>
 
-            <button class="title-btn a">
-              <svg class="btn-icon1" width="40" height="40">
-                <use
-                  href="./images/icons/icons-sprite.svg#icon-brand-awareness"
-                ></use>
-              </svg>
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
 
-              What is your name?<br />
-
-              Як тебе звати?
-            </button>
-
-            <div class="right">
+            <!-- block-girl -->
+            <div class="wapper-girl block-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">My name is Anna</p>
+                  <p lang="uk">Мене звати Аня</p>
+                </div>
+              </div>
               <img
                 loading="lazy"
                 width="100"
@@ -157,18 +176,10 @@
                 alt="woman-02"
               />
             </div>
-            <audio class="item-1" src="#" autoplay preload="auto"></audio>
-            <button class="title-btn b">
-              <svg class="btn-icon2" width="40" height="40">
-                <use
-                  href="./images/icons/icons-sprite.svg#icon-brand-awareness"
-                ></use>
-              </svg>
-              My name is Anna<br />
-              Мене звати Анна <br />
-            </button>
-            <audio class="item-2" src="#" autoplay preload="auto"></audio>
-            <p>Спробуй написати</p>
+
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+
+            <!-- <p>Спробуй написати</p>
             <form class="js-form">
               <label>
                 <input
@@ -192,6 +203,53 @@
               <button class="submit" type="submit">Перевірити</button>
               <p class="success"></p>
               <audio class="item-3" src="#" autoplay preload="auto"></audio>
+            </form> -->
+            <p class="subtitle-write" lang="uk">
+              Спробуй написати <span class="emoji">✍️</span>
+            </p>
+
+            <form class="js-form">
+              <label class="form-label">
+                <input
+                  class="js-input"
+                  type="text"
+                  name="hello"
+                  placeholder="👦 Як тебе звати?"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+
+              <label>
+                <input
+                  class="js-input2"
+                  type="text"
+                  name="hi"
+                  placeholder="👩 Мене звати Аня"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <button class="submit" type="submit">
+                Перевірити <span class="emoji">🤔</span>
+              </button>
+
+              <p class="success"></p>
+              <audio
+                class="audio-answer"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+
+              <audio
+                class="audio-answer-2"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
             </form>
           </li>
           <li>
