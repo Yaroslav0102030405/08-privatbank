@@ -5,6 +5,7 @@ const refs = {
   item1: document.querySelector(".audio-hello"),
   item2: document.querySelector(".audio-hi"),
   item3: document.querySelector(".audio-answer"),
+  item4: document.querySelector(".audio-answer-2"),
   formSubmit: document.querySelector(".js-form"),
   btnSubmit: document.querySelector(".submit"),
   dataHello: document.querySelector('[data-hello="hello"]'),
@@ -55,27 +56,44 @@ function onFormSubmit(e) {
 
   if (
     (hello === "Hello ✔️" && hi === "Hi ✔️") ||
-    (hello === "hello ✔️" && hi === "hi ✔️")
+    (hello === "hello ✔️" && hi === "hi ✔️") ||
+    (hello === "Hello ✔️" && hi === "hi ✔️") ||
+    (hello === "hello ✔️" && hi === "Hi ✔️")
   ) {
     // item3.src = "../audio/Правильна відповідь.mp3";
     onAudioSuccess();
+    // onAudioSuccessSwtTimeout();
     // inputEl.value = `${inputEl.value} ✔️`;
     // inputEl2.value = `${inputEl2.value} ✔️`;
-    refs.success.innerHTML =
-      "✔️ Правільна відповідь <br/>Будь ласка перeходьте <br /> до уроку 2";
-    refs.item01.classList.add("gray2");
-  } else if (hello === "Hello ✔️") {
+    // refs.success.classList.add("active");
+    // refs.btnSubmit.textContent = "✔️ Правильно";
+    // refs.btnSubmit.style.backgroundColor = "#2ecc71";
+    // refs.success.innerHTML = "Будь ласка перeходьте <br /> до уроку 2";
+    // refs.item01.classList.add("gray2");
+    markupSuccess();
+  } else if (hello === "Hello ✔️" || hello === "hello ✔️") {
     onAudioError();
+
     // item3.src = "../audio/Відповідь не правиль.mp3";
     // inputEl2.value = `${inputEl2.value} ❌`;
     onSmileyError(refs.inputEl2);
-    refs.success.textContent = "❌ Не правильна відповідь";
-  } else if (hi === "Hi ✔️") {
+    // refs.success.classList.add("active-2");
+    // refs.btnSubmit.textContent = "❌ Не правильно";
+    // refs.success.innerHTML = "Будь ласка спробуйте ще";
+    // refs.btnSubmit.style.backgroundColor = "tomato";
+    markupError();
+    // refs.success.textContent = "❌ Не правильна відповідь";
+  } else if (hi === "Hi ✔️" || hi === "hi ✔️") {
     onAudioError();
     // item3.src = "../audio/Відповідь не правиль.mp3";
     // inputEl.value = `${inputEl.value} ❌`;
     onSmileyError(refs.inputEl);
-    refs.success.textContent = "❌ Не правильна відповідь";
+    // refs.success.classList.add("active-2");
+    // refs.success.textContent = "❌ Не правильна відповідь";
+    // refs.btnSubmit.textContent = "❌ Не правильно";
+    // refs.success.innerHTML = "Будь ласка спробуйте ще";
+    // refs.btnSubmit.style.backgroundColor = "tomato";
+    markupError();
   } else {
     // item3.src = "../audio/Відповідь не правиль.mp3";
     // inputEl.value = `${inputEl.value} ❌`;
@@ -83,10 +101,30 @@ function onFormSubmit(e) {
     onSmileyError(refs.inputEl);
     onSmileyError(refs.inputEl2);
     onAudioError();
-    refs.success.textContent = "❌ Не правильна відповідь";
+    // refs.success.classList.add("active-2");
+    // refs.success.textContent = "❌ Не правильна відповідь";
+    // refs.btnSubmit.textContent = "❌ Не правильно";
+    // refs.success.innerHTML = "Будь ласка спробуйте ще";
+    // refs.btnSubmit.style.backgroundColor = "tomato";
+    markupError();
   }
 }
 
+// markup
+const markupSuccess = () => {
+  refs.btnSubmit.textContent = "✔️ Правильно";
+  refs.btnSubmit.style.backgroundColor = "#2ecc71";
+  refs.success.innerHTML = "Будь ласка перeходьте <br /> до уроку 2";
+  refs.item01.classList.add("gray2");
+};
+
+const markupError = () => {
+  refs.btnSubmit.textContent = "❌ Не правильно";
+  refs.success.innerHTML = "Будь ласка спробуйте ще";
+  refs.btnSubmit.style.backgroundColor = "tomato";
+};
+
+// audio
 const onAudioSuccess = () => {
   refs.item3.src = "../audio/Правильна відповідь.mp3";
 };
@@ -95,6 +133,13 @@ const onAudioError = () => {
   refs.item3.src = "../audio/Відповідь не правиль.mp3";
 };
 
+// function onAudioSuccessSwtTimeout() {
+//   setTimeout(() => {
+//     refs.item4.src = "../audio/Правильна відповідь.mp3";
+//   }, 500);
+// }
+
+// input-1
 function onInput(event) {
   if (
     event.currentTarget.value === "Hello" ||
@@ -106,6 +151,7 @@ function onInput(event) {
   }
 }
 
+// inpup-2
 function onInput2(event) {
   // refs.inputEl2.textContent = event.currentTarget.value === "Hi"
   if (
@@ -117,6 +163,7 @@ function onInput2(event) {
   }
 }
 
+// emoji success and error
 const onSmileySuccess = (inputSuccess) => {
   inputSuccess.value = `${inputSuccess.value} ✔️`;
 };

@@ -7,6 +7,7 @@
 body {
   font-family: var(--basic-system-font);
   cursor: url("../images/1.png"), auto;
+  font-weight: bold;
 
   font-optical-sizing: auto;
   font-weight: 400;
@@ -85,6 +86,7 @@ img {
 
 .title {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .subtitle {
@@ -145,11 +147,12 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   padding: 15px 30px;
   border-radius: 8px;
   background-color: transparent;
   box-shadow: 10px 5px 5px black;
+  vertical-align: middle;
 }
 
 .submit:hover {
@@ -271,13 +274,45 @@ input {
   margin-bottom: 10px;
 }
 
-input::placeholder {
-  color: white;
+/* input::placeholder {
+  color: #001d5f;
   font-size: 20px;
+} */
+
+/* input:focus {
+  color: white;
+} */
+
+input {
+  color: white;
 }
+
+/* input {
+  background-color: #ca219d;
+} */
 
 /* .item-01.gray {
   background-color: #d3d3d3;
+} */
+
+/* .success {
+  display: none;
+}
+
+.success.active {
+  display: block;
+  color: white;
+  background-color: #2ecc71;
+  padding: 15px 10px;
+  border-radius: 8px;
+}
+
+.success.active-2 {
+  background-color: tomato;
+  display: block;
+  color: white;
+  padding: 15px 10px;
+  border-radius: 8px;
 } */
 
 .item-01.gray2 {
