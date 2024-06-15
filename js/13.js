@@ -139,37 +139,82 @@ colorsEl.insertAdjacentHTML("beforeend", markup);
 // Promise - это обьект у которого есть несколько состояний
 
 // Promise
-const fetchPokemonById = (id) => {
-  // fetch - вернет проимс
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((r) => r.json());
+// const fetchPokemonById = (id) => {
+//   // fetch - вернет проимс
+//   return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((r) => r.json());
+// };
+
+// fetchPokemonById(1).then(onFetchSuccess).catch(onFetchError);
+// fetchPokemonById(2).then(onFetchSuccess).catch(onFetchError);
+// fetchPokemonById(3).then(onFetchSuccess).catch(onFetchError);
+// fetchPokemonById(4).then(onFetchSuccess).catch(onFetchError);
+// fetchPokemonById(5).then(onFetchSuccess).catch(onFetchError);
+
+// function onFetchSuccess(pokemon) {
+//   console.log(pokemon);
+// }
+
+// function onFetchError(error) {
+//   console.log(error);
+// }
+
+// const makePromise = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (Math.random() > 0.5) {
+//         resolve("✅ это резолт");
+//       }
+
+//       reject("❌ это реджект");
+//     }, 2000);
+//   });
+// };
+
+// makePromise()
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log(error));
+
+const aEl = document.querySelector(".a");
+
+// fetch("https://pokeapi.co/api/v2/pokemon/2")
+//   .then((response) => response.json())
+//   .then((pokemon) => {
+//     console.log(pokemon);
+//     const markup = pokemonMarkup(pokemon);
+//     aEl.innerHTML = markup;
+//   })
+//   .catch((error) => console.log(error));
+
+// const pokemonMarkup = (pokemon) => {
+//   return `<img src="${pokemon.sprites.front_default}" />`;
+// };
+
+// рефакторин получить одного
+const BASE_URL = "https://pokeapi.co/api/v2";
+
+const fetchPokemon = (pokemonId) => {
+  return fetch(`${BASE_URL}/pokemon/${pokemonId}`).then((response) =>
+    response.json()
+  );
 };
 
-fetchPokemonById(1).then(onFetchSuccess).catch(onFetchError);
-fetchPokemonById(2).then(onFetchSuccess).catch(onFetchError);
-fetchPokemonById(3).then(onFetchSuccess).catch(onFetchError);
-fetchPokemonById(4).then(onFetchSuccess).catch(onFetchError);
-fetchPokemonById(5).then(onFetchSuccess).catch(onFetchError);
+function renderPokemonCard(pokemon) {
+  const pokemonMarkup = (pokemon) => {
+    return `<img src="${pokemon.sprites.front_default}" />`;
+  };
 
-function onFetchSuccess(pokemon) {
-  console.log(pokemon);
+  const markup = pokemonMarkup(pokemon);
+  aEl.innerHTML = markup;
 }
 
-function onFetchError(error) {
-  console.log(error);
-}
-
-const makePromise = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (Math.random() > 0.5) {
-        resolve("✅ это резолт");
-      }
-
-      reject("❌ это реджект");
-    }, 2000);
+fetchPokemon(1)
+  .then(renderPokemonCard)
+  .catch((error) => {
+    console.log(error);
   });
-};
 
-makePromise()
-  .then((result) => console.log(result))
+// получить много
+fetch("https://pokeapi.co/api/v2/pokemon?limit=15")
+  .then((r) => r.json())
+  .then(console.log)
   .catch((error) => console.log(error));
