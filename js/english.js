@@ -69,7 +69,7 @@ function onFormSubmit(e) {
     // refs.btnSubmit.textContent = "✔️ Правильно";
     // refs.btnSubmit.style.backgroundColor = "#2ecc71";
     // refs.success.innerHTML = "Будь ласка перeходьте <br /> до уроку 2";
-    // refs.item01.classList.add("gray2");
+    refs.item01.classList.add("gray2");
     markupSuccess();
   } else if (hello === "Hello ✔️" || hello === "hello ✔️") {
     onAudioError();
