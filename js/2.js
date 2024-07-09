@@ -94,6 +94,8 @@ refs.end.addEventListener("click", onEnd);
 
 const text = document.createElement("p");
 text.classList.add("text2");
+text.innerHTML = `⚠️ У вас є 3 спроби `;
+refs.btnEl5.after(text);
 
 function onСonfirmPinСode() {
   const value2 = Number(refs.input2.value);
@@ -102,7 +104,7 @@ function onСonfirmPinСode() {
   } else if (value2 !== PASSWORD_CARD) {
     start += total2;
     text.innerHTML = `❌ Невірний pin-код. Спроба ${start} `;
-    refs.btnEl5.after(text);
+    // refs.btnEl5.after(text);
     refs.formEl.reset();
     if (start === 1) {
       const audio1Src = "../music/reset.mp3";
