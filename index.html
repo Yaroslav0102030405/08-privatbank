@@ -12,116 +12,121 @@
     />
     <link rel="icon" href="images/22.png" type="image/png" />
 
-      <!-- Chrome, Firefox OS and Opera -->
-      <meta name="theme-color" content="green" />
-      <!-- <meta name="theme-color" content="#4285f4" /> -->
-      <!-- Windows Phone -->
-      <meta name="msapplication-navbutton-color" content="green" />
-      <!-- IOS Safari -->
-      <meta name="apple-mobile-web-app-status-bar-style" content="green" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="green" />
+    <!-- <meta name="theme-color" content="#4285f4" /> -->
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="green" />
+    <!-- IOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="green" />
     <link rel="stylesheet" href="./css/styles.css" />
- 
   </head>
   <body>
-
-   
     <!-- <h1>Первый</h1> -->
-    <audio src="./music/Будь ласка вставте в.mp3" autoplay preload="auto"></audio>
+    <audio src="./music/Будьласкавставтев.mp3" autoplay preload="auto"></audio>
 
     <div class="container">
       <div class="div-top">
         <div class="container3">
-        <div class="div-top2">
-          <img
-            class="logo"
-            width="200"
-            src="./images/ПриватБанк.png"
-            alt="logo"
-          />
-         
-        </div>
-        <div class="screen">
-          <h1 class="title" style="margin-top: 0; margin-bottom: 20px">
-            Будь ласка, вставте вашу картку
-          </h1>
-          <img class="photo-card" width="230" src="./images/kreditna-karta-privatbanka-universalna-2.jpg" alt="credit-cart">
-          <button class="btn0" type="button">Прововжити</button>
-         
-          <label class="label-input">
-            Введіть суму:
-            <input
-              class="input"
-              type="text"
-              inputmode="numeric"
-              onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
-              data-value
+          <div class="div-top2">
+            <img
+              loading="lazy"
+              class="logo"
+              width="200"
+              src="./images/ПриватБанк.png"
+              alt="logo"
             />
-          </label>
-          <button class="btn-confirm">Підтвердити</button>
-          <form class="js-form">
-          <label class="label-input2">
-            PIN-код: 1234
-            <input class="input"
-            type="password"  
-            minlength="4"
-            maxlength="4"
-            class="input2"
-            autofocus 
-            name="password" 
-              inputmode="numeric"
-              onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
-              data-value2
+          </div>
+          <div class="screen">
+            <h1 class="title" style="margin-top: 0; margin-bottom: 20px">
+              Будь ласка, вставте вашу картку
+            </h1>
+            <img
+              class="photo-card"
+              width="230"
+              src="./images/kreditna-karta-privatbanka-universalna-2.jpg"
+              alt="credit-cart"
             />
-          </label>
-        </form>
-          <button class="btn-confirm2">Підтвердити PIN</button>
-     
+            <button class="btn0" type="button">Прововжити</button>
+
+            <label class="label-input">
+              Введіть суму:
+              <input
+                class="input"
+                type="text"
+                inputmode="numeric"
+                onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+                data-value
+              />
+            </label>
+            <button class="btn-confirm">Підтвердити</button>
+            <form class="js-form">
+              <label class="label-input2">
+                PIN-код: 1234
+                <input
+                  class="input2"
+                  type="password"
+                  minlength="4"
+                  maxlength="4"
+                  autofocus
+                  name="password"
+                  inputmode="numeric"
+                  onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+                  data-value2
+                />
+              </label>
+            </form>
+            <button class="btn-confirm2">Підтвердити PIN</button>
+          </div>
+          <p
+            style="
+              text-align: center;
+              margin-bottom: 0;
+              /* color: lawngreen; */
+              color: #00b300;
+              font-size: 16px;
+            "
+          >
+            Термінал з видачі готівки
+          </p>
+          <div class="container flex">
+            <button class="btn-end">Вихід</button>
+            <button class="btn-start" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>Вставити картку
+            </button>
+          </div>
         </div>
+
+        <div class="div-button"></div>
+      </div>
+
+      <div class="top-check">
+        <!-- Квитанція -->
         <p
           style="
             text-align: center;
-            margin-bottom: 0;
-            /* color: lawngreen; */
-            color: #00b300;
-            font-size: 16px;
+            margin-top: 40px;
+            padding-bottom: 0;
+            margin-bottom: 10px;
           "
+          class="btn-check"
         >
-          Термінал з видачі готівки
+          Чек
         </p>
-        <div class="container flex">
-          <button class="btn-end">Вихід</button>
-          <button class="btn-start" type="button">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>Вставити картку</button>
-        </div>
-      </div>
-     
-      <div class="div-button" >
-   
-        </div>
-      </div>
-      
-      <div class="top-check">
-        <!-- Квитанція -->
-        <p style="text-align: center; margin-top: 40px; padding-bottom: 0; margin-bottom: 10px;" class="btn-check">Чек</p>
         <div class="hidden-check">
-          
-<div class="bottom-check">
-  <p class="check" style="margin: 0;">Квитанція про зняття коштів <br/>0 грн</p>
-</div>
-</div>
-</div>
+          <div class="bottom-check">
+            <p class="check" style="margin: 0">
+              Квитанція про зняття коштів <br />0 грн
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- </div> -->
 
-   
-
-    <!-- <script src="./js/1.js" type="module"></script> -->
     <script src="./js/2.js" type="module"></script>
-    <!-- <script src="./js/3.js" type="module"></script> -->
-   
-    
   </body>
 </html>
