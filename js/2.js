@@ -1,66 +1,3 @@
-// const stars = 3;
-// let price;
-
-// if (stars === 1) {
-//   price = 20;
-// } else if (stars === 2) {
-//   price = 30;
-// } else {
-//   console.log("Такого количества звед нет");
-// }
-
-// console.log(price);
-
-// switch (stars) {
-//   case 1:
-//     price = 20;
-//     break;
-
-//   case 2:
-//     price = 30;
-//     break;
-
-//   default:
-//     console.log("Такого количества звезд нет");
-// }
-
-// console.log(price);
-
-// switch (stars) {
-//   case 1:
-//     price = 20;
-//     break;
-
-//   case 2:
-//     price = 50;
-//     break;
-
-//   default:
-//     price = "Такого количетсва звед нет";
-// }
-
-// console.log(price);
-
-// for (let i = 0; i <= 5; i += 1) {
-//   console.log(i);
-// }
-
-// for (let i = 100; i >= 0; i -= 10) {
-//   console.log(i);
-// }
-
-// let total = 0;
-
-// for (let i = 0; i < 5; i += 1) {
-//   if (i % 2 !== 0) {
-//     continue;
-//   }
-
-//   total += i;
-// }
-
-// console.log(total);
-
 const refs = {
   titleEl: document.querySelector(".title"),
   inputEl: document.querySelector("input[data-value]"),
@@ -126,10 +63,6 @@ function onСonfirmPinСode() {
   }
 }
 
-// const minSalary2 = 1000;
-// const maxSalary2 = 9000;
-// let balance2 = 0;
-
 function onEnterPinCode() {
   refs.photoCard.classList.add("none");
   refs.btnEl.setAttribute("disabled", "");
@@ -137,12 +70,6 @@ function onEnterPinCode() {
   refs.input2.classList.add("active");
   refs.btnEl5.classList.add("active");
   refs.label2.classList.add("active");
-
-  // balance2 = Number(
-  //   Math.random() * (maxSalary - minSalary) + minSalary
-  // ).toFixed();
-
-  // refs.label2.innerHTML = `PIN-код: ${balance2}`;
 
   const audio1Src = "../music/reset.mp3";
   const audio2Src = "../music/Введіть пін код.mp3";
